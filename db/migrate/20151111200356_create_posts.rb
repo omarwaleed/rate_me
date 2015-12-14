@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :name
       t.boolean :approved
-      t.string :type
+      t.string :genre
       t.string :picture
 
       t.timestamps null: false

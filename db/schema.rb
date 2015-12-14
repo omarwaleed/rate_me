@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20151214110732) do
   create_table "posts", force: :cascade do |t|
     t.string   "name"
     t.boolean  "approved"
-    t.string   "type"
+    t.string   "genre"
     t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
         validates :password, length: 6..20
         validates :gender, inclusion: %w(male female)
         validate :that_born_on_is_not_in_the_future
+        validates_uniqueness_of :username
 
 	def that_born_on_is_not_in_the_future
 		self.errors.add :date_of_birth, 'is in the future' \

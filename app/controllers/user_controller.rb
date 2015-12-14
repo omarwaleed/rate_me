@@ -3,8 +3,14 @@ class UserController < ApplicationController
     def create
         @new_user = User.new(user_params)
         if @new_user.valid?
-            @new_user.create
+            puts '--------------'
+            puts 'Valid'
+            puts '--------------'
+            @new_user.save
         else
+            puts '--------------'
+            puts 'NOT valid'
+            puts '--------------'
             render 'new'
             return
         end
