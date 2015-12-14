@@ -13,13 +13,16 @@ Rails.application.routes.draw do
   
   # resources :session, module: 'api'
   
-  get 'api/session/new' => 'api/session#new', as: 'sign_in'
-  post 'api/session/create' => 'api/session#create'
+  get 'user/new' => 'user#new', as: 'new_user'
+  post 'user/create' => 'user#create'
+  
+  # get 'api/session/new' => 'api/session#new', as: 'sign_in'
+  # post 'api/session/create' => 'api/session#create'
   
   post '/rate' => 'rater#create', :as => 'rate'
   
   namespace :api, defaults: { format: :json } do
-    
+    resources :session
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

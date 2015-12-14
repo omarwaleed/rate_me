@@ -38,6 +38,9 @@ gem 'mini_magick'
 # following and social networking
 gem 'socialization'
 
+# api
+gem 'rabl'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

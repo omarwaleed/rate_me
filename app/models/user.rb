@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
 
 	def that_born_on_is_not_in_the_future
 		self.errors.add :date_of_birth, 'is in the future' \
-	  unless self.born_on <= Date.today
+	  unless self.date_of_birth <= Date.today
 	end
 end
