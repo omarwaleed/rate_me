@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     post 'user/create' => 'user#create'
     
     get 'api/session/new' => 'api/session#new', defaults: { format: :json }
-    post 'api/session/create' => 'api/session#create', defaults: { format: :json }
+    post 'api/session/create' => 'api/session#create', defaults: { format: :json }, :as => 'user'
     
     get 'api/post/index' => 'api/post#index', defaults: { format: :json }
   

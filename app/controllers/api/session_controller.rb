@@ -13,15 +13,16 @@ class Api::SessionController < Api::BaseController
             puts '--------------'
             puts 'user exists'
             puts '--------------'
-            # respond_with @user
+            respond_with @user
             # redirect_to(:action => 'index', :controller => 'api/post')
-            redirect_to api_post_index_path
+            # redirect_to api_post_index_path
         else
+            respond_with nil
             puts '--------------'
             puts 'user doesnt exists'
             puts '--------------'
-            flash[:notice] = "no user exist"
-            redirect_to(:action => 'new', :controller => 'api/session')
+            # flash[:notice] = "no user exist"
+            # redirect_to(:action => 'new', :controller => 'api/session')
         end
     end
 end
